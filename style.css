@@ -3,12 +3,75 @@ html {
   background: -webkit-linear-gradient(to left, #F27121, #E94057, #8A2387);
   background: linear-gradient(to left, #F27121, #E94057, #8A2387);
   color: white;
-  font-size: 10px;
+  font: 10px sans-serif;
 }
 
 body {
 }
 
 .calculator {
-  
+  background: lightgray;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  margin: 100px auto;
+  width: 60%;
+}
+
+.results {
+  font-size: 4rem;
+  font-weight: lighter;
+  padding: 50px 50px 25px;
+  text-align: right;
+}
+
+.expression {
+  font-size: 1.25rem;
+  display: block;
+  min-height: 15px;
+  padding: 0 50px 10px 0;
+  text-align: right;
+}
+
+.keypad {
+  background: white;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.key {
+  color: black;
+  font-size: 2rem;
+  opacity: 0.65;
+  padding: 15px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+  width: 25%;
+}
+
+.key:hover {
+  background: lightgray;
+  cursor: pointer;
+  opacity: 1;
+}
+
+div[data-key="187"] {
+  background: lightblue;
+  color: white;
+}
+
+div[data-key="187"]:hover {
+  background: lightblue;
+}
+
+.key:nth-child(-n+4),
+.key:nth-child(4n),
+.key:nth-child(-n+4):hover,
+.key:nth-child(4n):hover {
+  background: gray;
+  color: black;
+}
+
+.key:last-of-type {
+  border-radius: 0 0 10px 0;
 }
