@@ -1,3 +1,6 @@
+const linker = document.querySelector('.linker');
+const links = document.querySelector('.links');
+
 function add(n, m) {
   return n + m;
 }
@@ -33,3 +36,13 @@ function operate(op, n, m) {
       break;
   }
 }
+
+linker.addEventListener('mouseover', function(){
+  links.classList.add('active');
+  linker.classList.add('active');
+});
+
+links.addEventListener('mouseleave', function(){
+  links.classList.remove('active');
+  linker.classList.remove('active');
+});
